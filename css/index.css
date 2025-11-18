@@ -1,0 +1,114 @@
+*{  
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    
+}
+
+@font-face {
+    font-family: "bebas";
+    src: url(../Fontes/BebasNeueRegular.ttf) format("trueType");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "googleSans";
+    src: url(../Fontes/GoogleSans.ttf) format("trueType");
+    font-weight: 500;
+    font-style: normal;
+}
+
+header{
+    background-color: #1A263B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    box-shadow: 1px 1px 1px  black;
+}
+
+nav{
+    display: flex;
+    width: 60%;
+    gap: 30px;
+    font-family: "bebas";
+    
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+#logo{
+    width: 40%;
+    font-size: 20px;
+    font-family: "bebas";
+    color: white;
+    
+}
+
+
+#logoDestaque{
+    color: #55E8A8;
+    margin-top: -20px;
+}
+
+#inicio{
+  
+    background-image: radial-gradient(circle, #000000, #141f32, #3e4e69);
+    margin: auto;
+
+    text-align: center;
+}
+
+main{
+    
+    
+}
+
+#textoPrincipal{
+    text-align: center;
+    padding: 20px;
+    color:white;
+    background-image: url('/img/pontos.png');
+    background-repeat: no-repeat;
+    background-position-x: 80px;
+    background-position-y: 10px;
+}
+
+#nomeDestaque{
+    font-family: "bebas";
+    color: white;
+}
+
+#stack{
+    color: #F9D958;
+    border-bottom: 2px solid white;
+    width: 335px;
+    margin: auto;
+
+}
+
+#textoApresentacao{
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: "googleSans";
+    
+}
+
+
+
