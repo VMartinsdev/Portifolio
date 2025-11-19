@@ -37,8 +37,8 @@ nav{
     width: 60%;
     gap: 30px;
     font-family: "bebas";
-    
-
+    align-items: center;
+    height: 70px;
 }
 
 a{
@@ -54,7 +54,7 @@ li{
 
 #logo{
     width: 40%;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "bebas";
     color: white;
     
@@ -63,7 +63,7 @@ li{
 
 #logoDestaque{
     color: #55E8A8;
-    margin-top: -20px;
+    margin-top: -16px;
 }
 
 #inicio{
@@ -83,10 +83,8 @@ main{
     text-align: center;
     padding: 20px;
     color:white;
-    background-image: url('/img/pontos.png');
-    background-repeat: no-repeat;
-    background-position-x: 80px;
-    background-position-y: 10px;
+    
+    
 }
 
 #nomeDestaque{
@@ -108,6 +106,25 @@ main{
     text-align: center;
     font-family: "googleSans";
     
+}
+
+#linkDestaque{
+    font-size: 25px;
+    color: #55E8A8;
+}
+
+#stack{
+    font-family: 'bebas';
+    font-size: 25px;
+}
+
+.divProjetos{
+    padding: 20px;
+    background-color: #1A263B;
+    height: 500px;
+    background-image: url(../img/fundoProjetos.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 
