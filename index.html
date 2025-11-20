@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="css/index.css">
 
 </head>
-<body>
-    <header>
+<body >
+    <header >
         <div id="logo">
             <h1>VMARTINS</h1>
             <h1 id="logoDestaque">DEV</h1>
         </div>
         <nav >
-                <a id="linkDestaque" href="">Home</a>
-                <a href="">Projetos</a>
+                <a id="linkDestaque" href="#home">Home</a>
+                <a href="#projetos">Projetos</a>
                 <a href="">Contatos</a>
         </nav>
     
     </header>
     <main>
-    
-        <section id="inicio">
+
+        <section id="home">
             <div id="textoPrincipal">
                 <h1 id="ola">Ola, eu sou</h1>
                 <h1 id="nomeDestaque">VITOR MARTINS</h1>
@@ -32,11 +32,10 @@
                     Atualmente atuo de forma independente,em projetos freelance e projetos pessoais.
                 </p>
             </div>
-            <div>
-                <img src="img/Mobile (2).png" alt="">
-            </div>
+                <img src="img/Mobile (2).png" alt="" id="imagemPerfil">
+            </div>        
         </section>
-        <section class="projetos">
+        <section class="projetos" id="projetos">
             <h1 id="tituloProjetos">Projetos</h1>
             <p>Seção destinada a alguns projetos de maior relevância.</p>
             <div class="divProjetos">
@@ -63,4 +62,40 @@
         </section>
     </main>
 </body>
+<script>
+    const  
+
+
+    const options = {
+  rootMargin: '-80px 0px 0px 0px', // O elemento é considerado ativo quando estiver no meio da tela
+  threshold: 0 // Não é estritamente necessário neste caso
+};
+
+// 1. Cria o Observador
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // entry.isIntersecting é TRUE se a seção estiver visível de acordo com as options
+
+    // 2. Se a seção entrar na área de observação:
+    if (entry.isIntersecting) {
+      // 3. Remove a classe 'active' de TODOS os links
+      navLinks.forEach(link => link.classList.remove('active'));
+
+      // 4. Conecta a seção ao link correspondente
+      const targetId = entry.target.id;
+      const activeLink = document.querySelector(`.nav-link[href="#${targetId}"]`);
+
+      // 5. Adiciona a classe 'active' APENAS ao link da seção visível
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  });
+}, options);
+
+// 6. Atribui o Observador a cada Seção
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
 </html>
