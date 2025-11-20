@@ -14,9 +14,9 @@
             <h1 id="logoDestaque">DEV</h1>
         </div>
         <nav >
-            <li><a id="linkDestaque" href="">Home</a></li>
-            <li><a href="">Projetos</a></li>
-            <li><a href="">Contatos</a></li>
+                <a id="linkDestaque" href="">Home</a>
+                <a href="">Projetos</a>
+                <a href="">Contatos</a>
         </nav>
     
     </header>
@@ -28,7 +28,7 @@
                 <h1 id="nomeDestaque">VITOR MARTINS</h1>
                 <h2 id="stack">Desenvolvedor de software</h2>
             
-                <p id="textoApresentacao">Formado em análise e desenvolvimento de sistemas, além de diversas certificações na área de tecnologia.
+                <p>Formado em análise e desenvolvimento de sistemas, além de diversas certificações na área de tecnologia.
                     Atualmente atuo de forma independente,em projetos freelance e projetos pessoais.
                 </p>
             </div>
@@ -36,17 +36,30 @@
                 <img src="img/Mobile (2).png" alt="">
             </div>
         </section>
-        <section id="projetos">
+        <section class="projetos">
+            <h1 id="tituloProjetos">Projetos</h1>
+            <p>Seção destinada a alguns projetos de maior relevância.</p>
             <div class="divProjetos">
-                <ul>
-                    <li>teste</li>
-                </ul>
-                <div>
-                    <img src="img/farmaTech.png" alt="" >
+                <img class="seta" src="img/logoFarmatech.svg" alt="" id="logoFarmatech"> 
+                    <ul class="infoProjetos">
+                        <li >Sistema completo para cadastro, movimentação e acompanhamento de métricas de uma drogaria</li>
+                        <li>Principais funcionalidades:
+                            <ul class="listInList">
+                                <li>Cadastro de produtos</li>
+                                <li>Recepção de mercadorias</li>
+                                <li>Gerenciamento de usuários</li>
+                                <li>Relatórios financeiros</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                <div id="containerImg">
+                    <img src="img/farmaTech.png" alt="" id="imgFarmatech">
                 </div>
-                
             </div>
-            
+            <div class="divProjetos">
+
+            </div>
         </section>
     </main>
 </body>

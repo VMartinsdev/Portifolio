@@ -47,10 +47,6 @@ a{
     font-size: 20px;
 }
 
-li{
-    text-decoration: none;
-    list-style: none;
-}
 
 #logo{
     width: 40%;
@@ -63,7 +59,7 @@ li{
 
 #logoDestaque{
     color: #55E8A8;
-    margin-top: -16px;
+    margin-top: -15px;
 }
 
 #inicio{
@@ -95,12 +91,15 @@ main{
 #stack{
     color: #F9D958;
     border-bottom: 2px solid white;
-    width: 335px;
+    width: 300px;
     margin: auto;
+    font-family: 'bebas';
+    font-size: 25px;
 
 }
 
-#textoApresentacao{
+p{
+    color: white;
     letter-spacing: 1px;
     margin-top: 10px;
     text-align: center;
@@ -113,18 +112,67 @@ main{
     color: #55E8A8;
 }
 
-#stack{
-    font-family: 'bebas';
-    font-size: 25px;
-}
 
 .divProjetos{
     padding: 20px;
-    background-color: #1A263B;
     height: 500px;
-    background-image: url(../img/fundoProjetos.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.projetos{
+    background-image: linear-gradient(90deg, #152135, #3d5784);
+    text-align: center;
+    
+}
+
+#imgFarmatech{
+    box-shadow: 0px 0px 20px 6px rgb(0 0 0);
+    border-radius: 5px;
+}
+
+#tituloProjetos{
+    color: white;
+    font-family: 'bebas';
+    font-size: 40px;
+    border-bottom: 2px solid white;
+    width: 250px;
+    margin: auto;
+}
+
+#logoFarmatech{
+    width: 150px;
+}
+
+
+.listInList > li{
+    margin: 5px;
+    list-style-type: disc;
+    text-align: left;
+    list-style-image: none;
+}
+
+.infoProjetos{
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    width: 310px;
+    color: white;
+    font-family: 'googleSans';
+    list-style-image: url(/img/seta.svg);
+
+
+}
+
+
+.infoProjetos > li{
+    margin: 10px;
+    text-align: left;
+}
+
+#containerImg{
+    margin-top: 50px;
 }
 
 
