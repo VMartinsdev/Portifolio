@@ -128,9 +128,10 @@ p{
 }
 
 
-#linkDestaque{
+.linkDestaque{
     font-size: 25px;
     color: #55E8A8;
+    transition-duration: 0.3s;
 }
 
 
