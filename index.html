@@ -24,7 +24,7 @@
 
         <section id="home">
             <div id="textoPrincipal">
-                <h1 id="ola">Ola, eu sou</h1>
+                <p id="ola">Olá, eu sou o</p>
                 <h1 id="nomeDestaque">VITOR MARTINS</h1>
                 <h2 id="stack">Desenvolvedor de software</h2>
             
@@ -36,35 +36,53 @@
             </div>        
         </section>
         <section class="projetos" id="projetos">
-            <h1 id="tituloProjetos">Projetos</h1>
+            <h1 id="txtProjetos">Projetos</h1>
             <p>Seção destinada a alguns projetos de maior relevância.</p>
-            <div class="divProjetos">
-                <img class="seta" src="img/logoFarmatech.svg" alt="" id="logoFarmatech"> 
+                <article>
+                    <img class="seta" src="img/logoFarmatech.svg" alt="texto personalizado da farmatech" id="logoFarmatech">
+                    <p>
+                        Sistema completo para cadastro, movimentação e acompanhamento de métricas de uma drogaria
+                    </p>
+                        <ul class="infoProjetos">
+                            <li class="tituloLista">Principais funcionalidades: </li>
+                                <ul class="listInList">
+                                    <li>Cadastro de produtos</li>
+                                    <li>Recepção de mercadorias</li>
+                                    <li>Gerenciamento de usuários</li>
+                                    <li>Relatórios financeiros</li>
+                                </ul>
+                            
+                     </ul>
+                    <div id="containerImg">
+                        <img src="img/crudFarmatech.svg" alt="" class="imgProjetos">
+                    </div>
+                </article>
+                <article>
+                    <img id="logoIcv" src="img/logoIcv.svg" alt="Logo da ong instituto corpo vivo">
+                    <h2 class="tituloProjetos">LANDING PAGE - ONG INSTITUTO CORPO VIVO</h2>
+                    <p style="text-align:center; padding: 10px;">Landing page desenvolvida para apresentar a missão, valores e ações sociais realizadas pelo Instituto Corpo Vivo. O objetivo principal é fortalecer a presença digital da ONG, ampliar sua visibilidade e facilitar a arrecadação de alimentos, roupas e doações financeiras.</p>
                     <ul class="infoProjetos">
-                        <li >Sistema completo para cadastro, movimentação e acompanhamento de métricas de uma drogaria</li>
-                        <li>Principais funcionalidades:
+                        <li class="tituloLista">Ferramentas utilizdas: </li>
                             <ul class="listInList">
-                                <li>Cadastro de produtos</li>
-                                <li>Recepção de mercadorias</li>
-                                <li>Gerenciamento de usuários</li>
-                                <li>Relatórios financeiros</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
                             </ul>
-                        </li>
+                        
+                        <li class="tituloLista">Informações Técnicas:</li>
+                            <ul class="listInList">
+                                <li>Cards estilizados com CSS e sombras para destacar conteúdo</li>
+                                <li>Estrutura modular de artigos dentro de seções</li>
+                                <li>Efeito hover em elementos interativos</li>
+                                <li>Design pensado para mobile-first</li>
+                            </ul>    
                     </ul>
-                    
-                <div id="containerImg">
-                    <img src="img/farmaTech.png" alt="" id="imgFarmatech">
-                </div>
-            </div>
-            <div class="divProjetos">
-
-            </div>
+                    <img src="img/homeIcv.svg" alt="" class="imgProjetos">
+                </article>
         </section>
     </main>
 </body>
 <script>
-    const  
-
 
     const options = {
   rootMargin: '-80px 0px 0px 0px', // O elemento é considerado ativo quando estiver no meio da tela

@@ -27,16 +27,22 @@ body{
     font-style: normal;
 }
 
+@font-face{
+    font-family: "coolvetica";
+    src: url(../Fontes/CoolveticaRg.otf) format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
 header{
     background-color: #1A263B;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 10px;
-    box-shadow:  3px 18px 20px black;
+    box-shadow:  0px 8px 20px 0px black;
     position: fixed;
     width: 100%;
-    z-index: 1000;
 }
 
 nav{
@@ -61,8 +67,8 @@ main{
 
 #logo{
     width: 40%;
-    font-size: 15px;
-    font-family: "bebas";
+    font-size: 11px;
+    font-family: "googleSans";
     color: white;
     
 }
@@ -70,7 +76,12 @@ main{
 
 #logoDestaque{
     color: #55E8A8;
-    margin-top: -18px
+    margin-top: -11px
+}
+
+#ola{
+    font-family: "coolvetica";
+    font-size: 30px;
 }
 
 #home{
@@ -115,33 +126,22 @@ p{
     
 }
 
+
 #linkDestaque{
     font-size: 25px;
     color: #55E8A8;
 }
 
 
-.divProjetos{
-    padding: 20px;
-    height: 500px;
-    text-align: center;
-    align-items: center;
-    
-}
 
-.projetos{
-    background-image: linear-gradient(90deg, #152135, #3d5784);
-    text-align: center;
-    padding-top: 50px;
-    
-}
-
-#imgFarmatech{
+.imgProjetos{
+    margin-top: 20px;
     box-shadow: 0px 0px 20px 6px rgb(0 0 0);
     border-radius: 5px;
+    width: 350px;
 }
 
-#tituloProjetos{
+#txtProjetos{
     color: white;
     font-family: 'bebas';
     font-size: 40px;
@@ -152,6 +152,7 @@ p{
 
 #logoFarmatech{
     width: 150px;
+    margin-top: 60px
 }
 
 
@@ -160,6 +161,7 @@ p{
     list-style-type: disc;
     text-align: left;
     list-style-image: none;
+    margin-left: 30px;
 }
 
 .infoProjetos{
@@ -169,8 +171,6 @@ p{
     width: 310px;
     color: white;
     font-family: 'googleSans';
-    list-style-image: url(/img/seta.svg);
-
 
 }
 
@@ -181,8 +181,34 @@ p{
 }
 
 #projetos{
-    scroll-margin-top: 70px
+    scroll-margin-top: 70px;
+    background-image: linear-gradient(90deg, #152135, #3d5784);
+    text-align: center;
+    padding-top: 50px;
+    padding: 20px;
 }
+
+#logoIcv{
+    width: 80px;
+    border-radius: 80px;
+    margin-bottom: 20px;
+}
+
+article{
+    margin-bottom: 80px;
+}
+
+.tituloProjetos{
+    font-family: 'bebas';
+    color: white;
+    font-size: 30px;
+}
+
+.tituloLista{
+    color: #F9D958;
+}
+
+
 
 
 
