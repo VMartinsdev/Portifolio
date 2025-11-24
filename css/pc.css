@@ -1,0 +1,55 @@
+#home{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    align-items: center;
+
+}
+
+#textoPrincipal{
+    width: 600px;
+    height: 320px;
+}
+
+
+#logo{
+    font-size: 17px;
+}
+
+a{
+    font-size: 28px;
+}
+
+#linkDestaque{
+    font-size: 38px;
+}
+
+#nomeDestaque{
+    font-size: 50px;
+}
+
+.articleProjetos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 950px;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.imgProjetos{
+    width: 600px;
+}
+
+.infoProjetos{
+    margin-top: 50px;
+}
+
+.descricaoProjetos{
+    margin-bottom: 50px;
+}
+
+.tituloProjetos{
+    width: 100%;
+}
