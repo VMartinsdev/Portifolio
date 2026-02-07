@@ -24,7 +24,7 @@
 
 header{
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     position: relative;
     overflow: hidden;
 }
@@ -63,7 +63,7 @@ header{
 .titulo-header{
     margin-bottom: 10px;
     font-family: 'horizon';
-    font-size: clamp(1rem, 4vw, 3rem);
+    font-size: clamp(1rem, 4vw, 2rem);
     color: black;
 }
 
@@ -96,7 +96,7 @@ header{
 
 .font-horizon{
     font-family: 'horizon';
-    font-size: clamp(1rem, 4vw, 3rem);
+    font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .sobre-mim{
@@ -119,7 +119,12 @@ header{
 .meus-servicos{
     padding: 20px;
     text-align: center;
+    margin-top: -90px;
+    min-height: 800px;
+
 }
+
+
 
 .card-servicos{
     background-image: url(../img/fundoServicos.svg);
@@ -127,13 +132,12 @@ header{
     background-size: 100%;
     padding: 30px;
     color: white;
-    width: 250px;
     height: 250px;
     margin: auto;
 }
 
 .titulo-cards-servico{
-    font-size: 15px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-family: 'anton';
 }
 
@@ -141,7 +145,12 @@ header{
     font-family: 'questrial';
     text-align: left;
     font-size: clamp(0.7rem, 2.5vw, 1.5rem);
-    margin: 0px 35px 0px 35px;
+
+}
+
+.lista-card-sistemas{
+    font-size: clamp(0.7rem, 2.5vw, 1.5rem);
+    text-align: left;
 }
 
 
@@ -153,7 +162,141 @@ header{
 .projetos{
     text-align: center;
     padding: 20px;
-    background-image: linear-gradient(180deg, #CBCBCA, white, white)
+    background-image: linear-gradient(180deg, #CBCBCA, white, white);
+    height: 450px;
+}
+
+.container-card-servicos{
+    padding: 20px 50px 0px 50px;
+    max-height: 1300px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-track img {
+    max-width: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carousel-img{
+    width: 1000px;
 }
 
 
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 10px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: black !important;
+    color: black!important;
+    overflow-y: auto;
+    border-radius: 8px !important; 
+    position: relative;
+    animation: scaleIn 0.3s ease;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+.modal-header {
+    width: 100%;
+    height: 220px;       
+    overflow: hidden;
+    border-radius: 12px;
+
+}
+
+.modal-body{
+    margin: 0px 20px 0px 20px;
+}
+
+
+#modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    display: block;
+}
+
+#modal-titulo{
+    font-family: 'horizon';
+    color: #55E8A8;
+}
+
+.texto-modal{
+    font-family: 'questrial';
+    color: white;
+}
+
+
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.imagem-fundo-modal{
+    width: 300px;
+    align-items: center;
+}
+
+#modal-titulo{
+    margin-top: 30px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}

@@ -1,0 +1,38 @@
+header{
+    height: 100vh;
+}
+
+.conteudo-titulo-header{
+    margin-top: 100px;
+    max-width: 500px;
+
+}
+
+.titulo-sobre-mim{
+    font-size: 2em;
+}
+
+.texto-sobre-mim{
+    
+    min-width: 200px;
+    max-width: 700px;
+}
+
+.sobre-mim{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    height: 500px;
+}
+
+
+.projetos{
+    height: 500px;
+
+}
+
+.carousel-img{
+    width: 500px;
+}
+
