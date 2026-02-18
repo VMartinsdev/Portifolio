@@ -88,7 +88,35 @@ header{
     margin-right: 10px;
     font-family: 'horizon';
     font-size: 10px;
+
+    position: relative;
+    overflow: hidden;
 }
+
+
+.botoes::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(
+        circle,
+        rgba(85, 232, 168, 0.35),
+        transparent 65%
+    );
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.botoes:hover::after {
+    opacity: 1;
+}
+
+
 
 .font-questrial{
     font-family: 'questrial';
@@ -121,10 +149,26 @@ header{
     text-align: center;
     margin-top: -90px;
     min-height: 800px;
+    
 
 }
 
+.container-card-servicos{
+    padding: 20px 50px 0px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
 
 .card-servicos{
     background-image: url(../img/fundoServicos.svg);
@@ -132,8 +176,12 @@ header{
     background-size: 100%;
     padding: 30px;
     color: white;
-    height: 250px;
-    margin: auto;
+    height: auto;
+    max-width: 500px;
+
+    position: relative;
+    overflow: hidden;
+
 }
 
 .titulo-cards-servico{
@@ -166,10 +214,6 @@ header{
     height: 450px;
 }
 
-.container-card-servicos{
-    padding: 20px 50px 0px 50px;
-    max-height: 1300px;
-}
 
 .carousel-container {
     position: relative;
@@ -235,11 +279,10 @@ header{
 }
 
 .modal-header {
-    width: 100%;
     height: 220px;       
     overflow: hidden;
     border-radius: 12px;
-
+    justify-content: center;
 }
 
 .modal-body{
@@ -250,7 +293,7 @@ header{
 #modal-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   
+    object-fit: contain;   
     display: block;
 }
 
@@ -288,10 +331,6 @@ header{
     }
 }
 
-.imagem-fundo-modal{
-    width: 300px;
-    align-items: center;
-}
 
 #modal-titulo{
     margin-top: 30px;
@@ -299,4 +338,10 @@ header{
 
 body.modal-open {
     overflow: hidden;
+}
+
+#modal-media img,
+#modal-media video {
+    width: 100%;
+    height: 100vh;
 }

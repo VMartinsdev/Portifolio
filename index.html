@@ -43,29 +43,29 @@
     <section class="meus-servicos">
         <h1 class="font-horizon text-black" >Meus serviços<span style="color: #55E8A8;">.</span></h1>
         <p class="font-questrial">Soluções pensadas para gerar resultados reais para o seu negócio</p>
-        <div class="row g-4 container-card-servicos">
-            <div class="card-servicos col-12 col-lg-5">
+        <div class="container-card-servicos fade-in">
+            <div class="card-servicos">
                 <h3 class="titulo-cards-servico"> <img class="img-card-servico" src="img/iconeSite.svg" alt=""> Sites Institucionais</h3>
                 <p class="p-cards-servico">Sites profissionais para apresentar sua empresa, serviços e autoridade no mercado.
                     <br>Perfeito para quem quer credibilidade, presença digital e confiança.
                 </p>
             </div>
-            <div class="card-servicos col-12 col-lg-5">
+            <div class="card-servicos">
                 <h3 class="titulo-cards-servico"> <img class="img-card-servico" src="img/iconeEcommerce.svg" alt=""> E-commerce</h3>
                 <p class="p-cards-servico">Lojas virtuais completas, seguras e fáceis de gerenciar. <br>
                     Do layout à integração com pagamentos, tudo pronto para você vender 24h por dia.
                 </p>
             </div>
         </div>
-        <div class="row container-card-servicos">
-            <div class="card-servicos col-12 col-lg-5">
+        <div class="container-card-servicos fade-in">
+            <div class="card-servicos">
                 <h3 class="titulo-cards-servico"> <img class="img-card-servico" src="img/iconeLandingPage.svg" alt=""> E-commerce</h3>
                 <p class="p-cards-servico">
                     Páginas estratégicas focadas em conversão, ideais para vendas, lançamentos, captação de leads e anúncios. <br>
                     Design moderno, carregamento rápido e estrutura pensada para gerar resultados.
                 </p>
             </div>
-            <div class="card-servicos col-12 col-lg-5">
+            <div class="card-servicos">
                 <h3 class="titulo-cards-servico"> 
                     <img class="img-card-servico" src="img/iconeSistemas.svg" alt="">Sistemas sob medida
                 </h3>
@@ -101,8 +101,7 @@
         
         <div class="modal-content">
             <button class="modal-close">&times;</button>
-            <div class="modal-header">
-                <img id="modal-img" src="" alt="Imagem do projeto">
+            <div class="modal-header" id="modal-media">
             </div>
             <div class="modal-body">
                 <h2 id="modal-titulo"></h2>
@@ -123,6 +122,21 @@
     box.style.transform = `translateY(${-scroll * 0.3}px)`;
 });
 
+const fade = document.querySelectorAll(".fade-in");
+
+const obeservador = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+fade.forEach(el => obeservador.observe(el));
+
+
 
 
 function criarCarrossel(containerSelector) {
@@ -134,7 +148,7 @@ function criarCarrossel(containerSelector) {
     const btnNext = container.querySelector(".next");
 
     let index = 0;
-    const itemWidth = items[0].offsetWidth + 20; // largura + gap
+    const itemWidth = items[0].offsetWidth; // largura + gap
 
     function atualizar() {
         track.style.transform = `translateX(-${index * itemWidth}px)`;
@@ -262,7 +276,12 @@ const projetos = {
     projeto1: {
         titulo: "Studio Management",
         descricao: "Plataforma SaaS completa para gestão de studios de academia, pilates e crossfit, centralizando alunos, planos, agendamentos e pagamentos em um só lugar",
-        imagem: "img/projetos-farmatech.svg",
+        media: {
+            tipo: "img",
+            mobile: "img/projetos-farmatech.svg",
+            desktop: "img/projetos-desktop.svg",
+            srcVideo: ""
+        },
         lista: [
             "Design responsivo",
             "Sistema escalável",
@@ -285,7 +304,6 @@ document.querySelectorAll(".carousel-img").forEach(img => {
 
         titulo.textContent = projeto.titulo;
         descricao.textContent = projeto.descricao;
-        modalImg.src = projeto.imagem;
 
 
         lista.innerHTML = "";
@@ -294,6 +312,8 @@ document.querySelectorAll(".carousel-img").forEach(img => {
             li.textContent = item;
             lista.appendChild(li);
         });
+
+        renderMedia(projeto.media);
 
 
         modal.classList.add("active");
@@ -318,6 +338,63 @@ modal.addEventListener("click", e => {
     }
 });
 
+
+
+function renderMedia(media) {
+    const modalMedia = document.getElementById("modal-media");
+    modalMedia.innerHTML = "";
+
+    if (media.tipo === "img") {
+        const picture = document.createElement("picture");
+
+        const sourceDesktop = document.createElement("source");
+        sourceDesktop.media = "(min-width: 992px)";
+        sourceDesktop.srcset = media.desktop;
+
+        const img = document.createElement("img");
+        img.src = media.mobile;
+        img.alt = "Imagem do projeto";
+
+        picture.appendChild(sourceDesktop);
+        picture.appendChild(img);
+
+        modalMedia.appendChild(picture);
+    }
+
+    if (media.tipo === "video") {
+        const video = document.createElement("video");
+        video.src = media.srcVideo;
+        video.controls = true;
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+        video.id = "modal-video";
+        modalMedia.appendChild(video);
+    }
+}
+
+
+document.querySelectorAll(".botoes").forEach(botao => {
+  botao.addEventListener("mousemove", e => {
+    const rect = botao.getBoundingClientRect();
+    botao.style.setProperty("--x", `${e.clientX - rect.left}px`);
+    botao.style.setProperty("--y", `${e.clientY - rect.top}px`);
+  });
+});
+
+const elements = document.querySelectorAll('.container-card-servicos');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+elements.forEach(el => observer.observe(el));
 
 
 </script>
