@@ -38,7 +38,7 @@
                     Se você <span class="texto-destaque">precisa marcar presença online</span>, vender mais ou
                     automatizar processos, eu posso te ajudar.
                 </p>
-                <a href="https://api.whatsapp.com/send?phone=5511975656434&text=Olá, gostaria de saber mais sobre seus serviços"><button class="botoes" id="btn-fale-comigo">FALE COMIGO</button></a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=5511975656434&text=Olá, gostaria de saber mais sobre seus serviços"><button class="botoes" id="btn-fale-comigo">FALE COMIGO</button></a>
             </div>
     </section>
     <section class="meus-servicos" id="servicos">
@@ -276,12 +276,12 @@ const carrossel = criarCarrossel(".carousel-container");
 
 const projetos = {
     projeto1: {
-        titulo: "Studio Management",
-        descricao: "Plataforma SaaS completa para gestão de studios de academia, pilates e crossfit, centralizando alunos, planos, agendamentos e pagamentos em um só lugar",
+        titulo: "FarmaTech",
+        descricao: "Plataforma SaaS completa para gestão de drogarias, centralizando produtos, fornecedores, estabelecimentos e recepção de mercadorias tudo em um só lugar",
         media: {
             tipo: "img",
             mobile: "img/projetos-farmatech.svg",
-            desktop: "img/projetos-desktop.svg",
+            desktop: "img/projetos-farmatech.svg",
             srcVideo: ""
         },
         lista: [
@@ -297,7 +297,6 @@ const modal = document.getElementById("modal");
 const titulo = document.getElementById("modal-titulo");
 const descricao = document.getElementById("modal-descricao");
 const lista = document.getElementById("modal-lista");
-const modalImg = document.getElementById("modal-img");
 
 document.querySelectorAll(".carousel-img").forEach(img => {
     img.addEventListener("click", () => {

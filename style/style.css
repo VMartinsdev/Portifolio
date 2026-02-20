@@ -289,14 +289,6 @@ header{
     margin: 0px 20px 0px 20px;
 }
 
-
-#modal-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;   
-    display: block;
-}
-
 #modal-titulo{
     font-family: 'horizon';
     color: #55E8A8;
@@ -345,3 +337,5 @@ body.modal-open {
     width: 100%;
     height: 100vh;
 }
+
+

@@ -41,7 +41,7 @@ header{
 
 .modal-content{
     height: 600px;
-    width: 80% !important;
+    width: 60% !important;
 }
 
 .modal-header{
@@ -53,3 +53,10 @@ header{
     margin: auto;
     width: 50%;
 }
+
+
+.modal-content img{
+    width: 500px !important;
+    height: 300px;
+}
+
