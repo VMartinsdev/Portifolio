@@ -19,8 +19,7 @@
                 <p class="font-questrial">Transformo ideias em sites rápidos, modernos e sistemas eficientes, focados em resultado, conversão e experiência do usuário.</p>
                 <div class="botoes-header">
                     <a href="#servicos"><button class="botoes">CONHEÇA OS SERVIÇOS</button></a>
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5511975656434&text=Olá, gostaria de saber mais sobre seus serviços"><button class="botoes">CONTATO</button></a>
-                    
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5511975656434&text=Olá, gostaria de saber mais sobre seus serviços"><button id="btn-contato" class="botoes">CONTATO</button></a>
                 </div>
             </div>
         </div>
@@ -60,7 +59,7 @@
         </div>
         <div class="container-card-servicos fade-in">
             <div class="card-servicos">
-                <h3 class="titulo-cards-servico"> <img class="img-card-servico" src="img/iconeLandingPage.svg" alt=""> E-commerce</h3>
+                <h3 class="titulo-cards-servico"> <img class="img-card-servico" src="img/iconeLandingPage.svg" alt="">Landing Pa</h3>
                 <p class="p-cards-servico">
                     Páginas estratégicas focadas em conversão, ideais para vendas, lançamentos, captação de leads e anúncios. <br>
                     Design moderno, carregamento rápido e estrutura pensada para gerar resultados.
@@ -95,6 +94,7 @@
             </div>
         </div>
         <button class="carousel-btn next">›</button>
+        
     </div>
     </section>
 
@@ -106,12 +106,14 @@
             </div>
             <div class="modal-body">
                 <h2 id="modal-titulo"></h2>
-                <p id="modal-descricao" class="texto-modal"></p>
+                <p id="modal-descricao" class="texto-modal">
+                    
+                </p>
+                <a id="modal-link"></a>
                 <ul id="modal-lista" class="texto-modal"></ul>
             </div>
         </div>
     </div>
-    <footer></footer>
 </body>
 <script>
 
@@ -276,12 +278,13 @@ const carrossel = criarCarrossel(".carousel-container");
 
 const projetos = {
     projeto1: {
-        titulo: "FarmaTech",
-        descricao: "Plataforma SaaS completa para gestão de drogarias, centralizando produtos, fornecedores, estabelecimentos e recepção de mercadorias tudo em um só lugar",
+        titulo: "Studio-Management",
+        descricao: `Plataforma SaaS completa para gestão de studios de musculação, pilates e cross-fit, com agendamento de aulas, controle de contratos e clientes, contas a receber e multi-estabelecimentos, o serviço é vendido por assinatura de responsabilidade da <a href="https://softdigital.com.br/">softdigital.com.br</a>`,
+        link: "softdigital.com.br",
         media: {
             tipo: "img",
-            mobile: "img/projetos-farmatech.svg",
-            desktop: "img/projetos-farmatech.svg",
+            mobile: "img/studioManagementMobile.png",
+            desktop: "img/studioManagementPc.png",
             srcVideo: ""
         },
         lista: [
@@ -295,6 +298,7 @@ const projetos = {
 
 const modal = document.getElementById("modal");
 const titulo = document.getElementById("modal-titulo");
+const link = document.getElementById("modal-link")
 const descricao = document.getElementById("modal-descricao");
 const lista = document.getElementById("modal-lista");
 
@@ -303,9 +307,9 @@ document.querySelectorAll(".carousel-img").forEach(img => {
         const key = img.dataset.projeto;
         const projeto = projetos[key];
 
-        titulo.textContent = projeto.titulo;
-        descricao.textContent = projeto.descricao;
+        titulo.innerHTML = projeto.titulo;
 
+        descricao.innerHTML = projeto.descricao;
 
         lista.innerHTML = "";
         projeto.lista.forEach(item => {
