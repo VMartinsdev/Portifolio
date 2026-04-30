@@ -8,18 +8,21 @@
     font-family: "horizon";
     src: url(../fontes/Horizon.otf) format("opentype");
     font-style: normal;
+    font-weight: normal;
 }
 
 @font-face{
     font-family: "questrial";
-    src: url(../fontes/Questrial-Regular.ttf) format("trueType");
+    src: url(../fontes/Questrial-Regular.ttf) format("truetype");
     font-style: normal;
+    font-weight: normal;
 }
 
 @font-face{
     font-family: "anton";
-    src: url(../fontes/Anton-Regular.ttf) format("trueType");
+    src: url(../fontes/Anton-Regular.ttf) format("truetype");
     font-style: normal;
+    font-weight: normal;
 }
 
 header{
@@ -68,7 +71,7 @@ a{
 .titulo-header{
     margin-bottom: 10px;
     font-family: 'horizon';
-    font-size: clamp(1rem, 4vw, 2rem);
+    font-size: clamp(16px, 2.5vw, 42px);
     color: black;
 }
 
@@ -87,7 +90,7 @@ a{
 }
 
 .botoes{
-    width: 200px;
+    width: 220px;
     height: 60px;
     color: white;
     padding: 10px;
@@ -98,7 +101,7 @@ a{
     margin-bottom: 10px;
     margin-right: 10px;
     font-family: 'horizon';
-    font-size: 10px;
+    font-size: 10.5px;
 
     position: relative;
     overflow: hidden;
@@ -222,7 +225,7 @@ a{
     text-align: center;
     padding: 20px;
     background-image: linear-gradient(180deg, #CBCBCA, white, white);
-    height: 450px;
+    height: 350px;
 }
 
 
@@ -243,12 +246,19 @@ a{
 .carousel-track {
     display: flex;
     transition: transform 1s ease;
+    padding: 20px;
 }
 
 .carousel-track img {
     max-width: 100%;
     flex-shrink: 0;
-    border-radius: 10px;
+    box-shadow: 0px 1px 12px 1px black;
+}
+
+.carousel-track img {
+    max-width: 100%;
+    flex-shrink: 0;
+    box-shadow: 0px 1px 12px 1px black;
 }
 
 .carousel-btn {
@@ -260,7 +270,7 @@ a{
 }
 
 .carousel-img{
-    width: 1000px;
+    width: 100%;
 }
 
 
